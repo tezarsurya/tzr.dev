@@ -98,6 +98,7 @@ header {
   background-color: hsla(197, 94%, 6%, 0.8);
   border-radius: 10px;
   backdrop-filter: blur(10px);
+  animation: code-popup 1s ease-out;
 }
 
 .code-content {
@@ -355,6 +356,17 @@ header {
   }
   to {
     width: 100%;
+  }
+}
+
+@keyframes code-popup {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
