@@ -67,7 +67,19 @@
             </g>
           </svg>
         </a>
+        <div id="nav-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+      <div id="mobile-nav">
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="">Portofolio</a></li>
+        </ul>
+      </div>
     </header>
 
     <!-- Main Content -->
@@ -155,8 +167,8 @@
       <section id="contact-me">
         <div class="container">
           <h2>Send Me a Message</h2>
-          <div id="contact-form">
-            <form id="message-me">
+          <form id="contact-form">
+            <div class="contact-form-container">
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" name="name" id="name" required />
@@ -170,17 +182,161 @@
                 <textarea name="message" id="message" rows="7"></textarea>
               </div>
               <button type="submit">Send</button>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </section>
 
       <!-- Recent Works Section -->
+      <section id="recent-works">
+        <div class="container">
+          <h2>Recent Works</h2>
+          <div id="works-container">
+            <div class="works-card">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/url-shortener.png" alt="url shortener app" />
+              <div class="works-description">
+                <h3>[2022] URL Shortener App</h3>
+                <p>Shorten your links at a glance.</p>
+              </div>
+              <div class="works-links">
+                <a
+                  href="https://url-shortener-nu-six.vercel.app/"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/web-svgrepo-com.svg"
+                    width="24"
+                    height="24"
+                    alt="website icon"
+                  />
+                </a>
+                <a
+                  href="https://github.com/tezarsurya/url-shortener"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/github-svgrepo-com.svg"
+                    height="24"
+                    width="24"
+                    alt="github icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="works-card">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/todo-app.png" alt="todo app" />
+              <div class="works-description">
+                <h3>[2022] Todo App</h3>
+                <p>Todo app with drag n drop reorder feature.</p>
+              </div>
+              <div class="works-links">
+                <a
+                  href="https://todo-app-tezarsurya.vercel.app/"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/web-svgrepo-com.svg"
+                    width="24"
+                    height="24"
+                    alt="website icon"
+                  />
+                </a>
+                <a
+                  href="https://github.com/tezarsurya/todo-app"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/github-svgrepo-com.svg"
+                    height="24"
+                    width="24"
+                    alt="github icon"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="works-card">
+              <span></span><span></span><span></span><span></span>
+              <img src="assets/bill-splitter.png" alt="bill splitter app" />
+              <div class="works-description">
+                <h3>[2021] Bill Splitter App</h3>
+                <p>Having a headache splitting your bills? Use this app.</p>
+              </div>
+              <div class="works-links">
+                <a
+                  href="https://holy-tip-calculator.netlify.app"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/web-svgrepo-com.svg"
+                    width="24"
+                    height="24"
+                    alt="website icon"
+                  />
+                </a>
+                <a
+                  href="https://github.com/tezarsurya/tip-calculator-react"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/github-svgrepo-com.svg"
+                    height="24"
+                    width="24"
+                    alt="github icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Nav Background Overlay -->
+      <div id="nav-overlay"></div>
     </main>
 
     <!-- Footer -->
     <footer>
-      <div class="footer-container">hello</div>
+      <div class="footer-container">
+        <div id="footer-links">
+          <div id="my-links">
+            <h2>Follow me on social media</h2>
+            <a href="https://www.instagram.com/tezarsurya">
+              <img
+                src="assets/instagram-svgrepo-com.svg"
+                width="24"
+                height="24"
+                alt="instagram icon"
+              />
+              <span>tezarsurya</span>
+            </a>
+            <a href="https://twitter.com/tzrsurya">
+              <img
+                src="assets/twitter-svgrepo-com.svg"
+                width="24"
+                height="24"
+                alt="twitter icon"
+              />
+              <span>tzrsurya</span>
+            </a>
+          </div>
+          <div id="revou-tribute">
+            <h2>Special thanks to:</h2>
+            <a href="https://revou.co/">
+              <img
+                src="assets/revou-logo.svg"
+                width="32"
+                height="32"
+                alt="revou logo"
+              />
+              <span>RevoU</span>
+            </a>
+            <p>for inspiring me to build this website.</p>
+          </div>
+        </div>
+        <span>Copyright &#169; 2023 Tezar Surya Fernanda</span>
+      </div>
     </footer>
 
     <script src="index.js" lang="javascript"></script>
