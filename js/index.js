@@ -8,6 +8,11 @@ const overlay = document.getElementById("nav-overlay");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
+const nameView = document.getElementById("name-view");
+const emailView = document.getElementById("email-view");
+const genderView = document.getElementById("gender-view");
+const birthDateView = document.getElementById("birthdate-view");
+const messageTextView = document.getElementById("message-text-view");
 const path = window.location.pathname;
 
 let mobileNavShow = false;
@@ -59,10 +64,17 @@ if (form) {
     const data = {
       name: rawData.get("name"),
       email: rawData.get("email"),
+      gender: rawData.get("gender"),
+      birthDate: rawData.get("birthdate"),
       message: rawData.get("message"),
     };
     e.currentTarget.reset();
-    alert(JSON.stringify(data, 4, null));
+
+    nameView.lastElementChild.innerHTML = data.name;
+    emailView.lastElementChild.innerHTML = data.email;
+    genderView.lastElementChild.innerHTML = data.gender;
+    birthDateView.lastElementChild.innerHTML = data.birthDate;
+    messageTextView.lastElementChild.innerHTML = data.message;
   });
 
   nameInput.addEventListener("input", (e) => {

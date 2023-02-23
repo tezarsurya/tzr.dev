@@ -27,6 +27,7 @@ code {
 
 html,
 body {
+  position: relative;
   padding: 0;
   margin: 0;
   display: flex;
@@ -141,6 +142,17 @@ textarea {
 
 #contact-form input {
   width: calc(100% - 2rem);
+  color-scheme: dark;
+}
+
+#contact-form input[type="date"] {
+  resize: none;
+}
+
+#contact-form input[type="radio"] {
+  width: auto;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 #contact-form button:hover {
@@ -166,6 +178,51 @@ textarea {
 #contact-form textarea:focus {
   border-color: var(--yellowAccent);
   box-shadow: 0 0 5px var(--lightMagenta) inset;
+}
+
+#contact-me .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+#contact-me-form {
+  width: 100%;
+}
+
+#contact-me-result {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid var(--cyanAccent);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--lightMagenta) inset;
+  backdrop-filter: blur(10px);
+}
+
+.message-view {
+  display: grid;
+  grid-template-columns: 1fr 0.5rem 60%;
+  align-items: start;
+}
+
+.message-view p {
+  margin: 0;
+}
+
+.message-view strong {
+  margin-left: 0.5rem;
+  overflow-wrap: break-word;
+}
+
+.message-view p,
+.message-view span,
+.message-view strong {
+  color: var(--lightMagenta);
 }
 
 #footer-links {
@@ -735,11 +792,11 @@ textarea {
   border-color: var(--cyanAccent);
 }
 
-@media screen and (min-width: 321px) {
-  /* #contact-form input {
-    width: auto;
-  } */
+.radio-group {
+  display: flex;
+}
 
+@media screen and (min-width: 321px) {
   .container {
     width: calc(100% - 3rem);
   }
@@ -780,16 +837,27 @@ textarea {
 
   #contact-me::before {
     top: 14rem;
-    left: 8rem;
+    left: 4rem;
     width: 16rem;
     height: 16rem;
   }
 
   #contact-me::after {
-    top: 22rem;
-    left: 24rem;
+    top: 30rem;
+    left: 8rem;
     width: 14rem;
     height: 14rem;
+  }
+
+  #contact-me .container {
+    display: grid;
+    grid-template-columns: 50% calc(50% - 2rem);
+    gap: 2rem;
+    margin: 0 auto;
+  }
+
+  #contact-me-result {
+    margin-top: 6rem;
   }
 
   #footer-links {
@@ -841,8 +909,9 @@ textarea {
     padding: 4rem 0;
   }
 
-  .container > h2 {
+  .container h2 {
     font-size: 1.8em;
+    text-align: left;
   }
 
   .hero-cta {
@@ -904,8 +973,10 @@ textarea {
     height: 14rem;
   }
 
-  #contact-form {
-    width: 70%;
+  #contact-me .container {
+    grid-template-columns: 60% calc(40% - 2rem);
+    gap: 2rem;
+    margin: 0 auto;
   }
 
   #works-container {
@@ -956,10 +1027,6 @@ textarea {
     font-size: 1.1em;
   }
 
-  #contact-form {
-    width: 60%;
-  }
-
   #contact-me::before {
     top: 12rem;
     left: 14rem;
@@ -972,6 +1039,12 @@ textarea {
     left: 28rem;
     width: 14rem;
     height: 14rem;
+  }
+
+  #contact-me .container {
+    grid-template-columns: 50% calc(50% - 2rem);
+    gap: 2rem;
+    margin: 0 auto;
   }
 
   .container {
@@ -1012,8 +1085,8 @@ textarea {
   }
 
   #contact-me::after {
-    top: 22rem;
-    left: 34rem;
+    top: 28rem;
+    left: 28rem;
     width: 16rem;
     height: 16rem;
   }
@@ -1056,8 +1129,8 @@ textarea {
   }
 
   #contact-me::after {
-    top: 22rem;
-    left: 48rem;
+    top: 28rem;
+    left: 40rem;
     width: 16rem;
     height: 16rem;
   }
