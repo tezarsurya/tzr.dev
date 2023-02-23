@@ -5,6 +5,9 @@ const navBtn = document.getElementById("nav-button");
 const mobileNav = document.getElementById("mobile-nav");
 const bars = navBtn.children;
 const overlay = document.getElementById("nav-overlay");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
 const path = window.location.pathname;
 
 let mobileNavShow = false;
@@ -60,6 +63,58 @@ if (form) {
     };
     e.currentTarget.reset();
     alert(JSON.stringify(data, 4, null));
+  });
+
+  nameInput.addEventListener("input", (e) => {
+    const invalidMessage = nameInput.nextElementSibling;
+    if (e.target.value == "") {
+      invalidMessage.style.display = "block";
+      invalidMessage.innerHTML = "Name cannot be empty";
+      e.currentTarget.style.borderColor = "#ef4444";
+    } else {
+      invalidMessage.removeAttribute("style");
+      e.currentTarget.removeAttribute("style");
+    }
+  });
+
+  emailInput.addEventListener("input", (e) => {
+    const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const invalidMessage = emailInput.nextElementSibling;
+    if (e.target.value == "") {
+      invalidMessage.style.display = "block";
+      invalidMessage.innerHTML = "Email cannot be empty";
+      e.currentTarget.style.borderColor = "#ef4444";
+    } else {
+      invalidMessage.removeAttribute("style");
+      e.currentTarget.removeAttribute("style");
+    }
+
+    if (e.target.value.match(emailFormat)) {
+      invalidMessage.removeAttribute("style");
+    }
+  });
+
+  emailInput.addEventListener("change", (e) => {
+    const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const invalidMessage = emailInput.nextElementSibling;
+    if (!e.target.value.match(emailFormat)) {
+      invalidMessage.style.display = "block";
+      invalidMessage.innerHTML = "That's an invalid email";
+      e.currentTarget.style.borderColor = "#ef4444";
+    }
+  });
+
+  messageInput.addEventListener("input", (e) => {
+    const invalidMessage = messageInput.nextElementSibling;
+    if (e.target.value == "") {
+      invalidMessage.style.display = "block";
+      invalidMessage.innerHTML =
+        "There's no way you're going to send a message without an actual message";
+      e.currentTarget.style.borderColor = "#ef4444";
+    } else {
+      invalidMessage.removeAttribute("style");
+      e.currentTarget.removeAttribute("style");
+    }
   });
 }
 

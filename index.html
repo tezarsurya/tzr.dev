@@ -172,14 +172,22 @@
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" name="name" id="name" required />
+                <span class="invalid-message"></span>
               </div>
               <div class="form-group">
                 <label for="email">Your Email</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" required />
+                <span class="invalid-message"></span>
               </div>
               <div class="form-group">
                 <label for="message">Your Message</label>
-                <textarea name="message" id="message" rows="7"></textarea>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="7"
+                  required
+                ></textarea>
+                <span class="invalid-message"></span>
               </div>
               <button type="submit">Send</button>
             </div>
@@ -302,7 +310,7 @@
         <div id="footer-links">
           <div id="my-links">
             <h2>Follow me on social media</h2>
-            <a href="https://www.instagram.com/tezarsurya">
+            <a href="https://www.instagram.com/tezarsurya" target="_blank">
               <img
                 src="assets/instagram-svgrepo-com.svg"
                 width="24"
@@ -311,7 +319,7 @@
               />
               <span>tezarsurya</span>
             </a>
-            <a href="https://twitter.com/tzrsurya">
+            <a href="https://twitter.com/tzrsurya" target="_blank">
               <img
                 src="assets/twitter-svgrepo-com.svg"
                 width="24"
@@ -323,7 +331,7 @@
           </div>
           <div id="revou-tribute">
             <h2>Special thanks to:</h2>
-            <a href="https://revou.co/">
+            <a href="https://revou.co/" target="_blank">
               <img
                 src="assets/revou-logo.svg"
                 width="32"

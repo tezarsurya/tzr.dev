@@ -655,6 +655,11 @@ textarea {
   grid-column: 1;
 }
 
+.invalid-message {
+  display: none;
+  color: #ef4444;
+}
+
 .mac-btns {
   display: flex;
   align-items: center;
