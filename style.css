@@ -171,6 +171,9 @@ textarea {
 #footer-links {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
 }
 
 #footer-links h2 {
@@ -192,6 +195,7 @@ textarea {
 #footer-links a {
   display: inline-flex;
   align-items: center;
+  width: fit-content;
   gap: 0.2rem;
 }
 
@@ -203,7 +207,6 @@ textarea {
   max-height: fit-content;
   background: url("assets/city-nights.jpg") no-repeat bottom center;
   background-size: cover;
-  padding: 0.3rem 0;
 }
 
 #hero::before {
@@ -501,7 +504,7 @@ textarea {
   padding: 2.5rem 0;
 }
 
-.container > h2 {
+.container h2 {
   width: 100%;
   margin-bottom: 2rem;
   color: var(--lightMagenta);
@@ -522,9 +525,20 @@ textarea {
 }
 
 .footer-container {
+  position: relative;
   width: calc(100% - 3rem);
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 2rem 0;
+}
+
+.footer-container > span {
+  position: absolute;
+  inset: auto auto 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  color: var(--lightMagenta);
+  text-align: center;
+  font-size: 0.9em;
 }
 
 .form-group {
@@ -559,7 +573,7 @@ textarea {
   font-size: 3em;
   text-shadow: 2px 2px var(--cyanAccent), 0 0 10px var(--lightMagenta);
   white-space: nowrap;
-  animation: reveal 2s ease-out;
+  animation: code-popup 1s ease-out;
 }
 
 .hero-content > p {
@@ -572,7 +586,7 @@ textarea {
   text-decoration: underline;
   font-style: italic;
   text-shadow: 2px 2px var(--primary), 0 0 10px var(--lightMagenta);
-  animation: reveal 2s ease-out;
+  animation: code-popup 1s ease-out;
 }
 
 .hero-cta {
@@ -591,7 +605,7 @@ textarea {
   text-shadow: 2px 4px var(--primary);
   text-decoration: none;
   transition: transform 0.03s ease-out, box-shadow 0.3s ease-out;
-  animation: hide 1s, reveal 2s ease-out 1s;
+  animation: hide 2s, code-popup 1s ease-out 2s;
 }
 
 .hero-cta:hover {
@@ -773,6 +787,20 @@ textarea {
     height: 14rem;
   }
 
+  #footer-links {
+    grid-template-rows: none;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+
+  #my-links {
+    grid-column: 1 / 5;
+  }
+
+  #revou-tribute {
+    grid-column: 5 / 7;
+  }
+
   #works-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -783,6 +811,10 @@ textarea {
   #works-container .works-card:nth-child(3) {
     transform-origin: top left;
     transform: translateX(calc(50% + 1rem));
+  }
+
+  .footer-container {
+    width: calc(100% - 6rem);
   }
 
   .works-card {
@@ -881,6 +913,10 @@ textarea {
     transform: translateX(0);
   }
 
+  .footer-container {
+    width: calc(100% - 8rem);
+  }
+
   .works-card {
     grid-template-rows: 1fr 1fr;
   }
@@ -937,6 +973,10 @@ textarea {
     width: calc(100% - 20rem);
   }
 
+  .footer-container {
+    width: calc(100% - 20rem);
+  }
+
   .hero-nav {
     width: calc(100% - 20rem);
   }
@@ -977,6 +1017,10 @@ textarea {
     width: calc(100% - 30rem);
   }
 
+  .footer-container {
+    width: calc(100% - 30rem);
+  }
+
   .hero-nav {
     width: calc(100% - 30rem);
   }
@@ -1014,6 +1058,10 @@ textarea {
   }
 
   .container {
+    width: calc(100% - 52rem);
+  }
+
+  .footer-container {
     width: calc(100% - 52rem);
   }
 

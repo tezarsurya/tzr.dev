@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="profile.css" />
 
-    <title>Profile</title>
+    <title>Profile | tzr.dev</title>
   </head>
   <body>
     <!-- Header -->
@@ -41,7 +41,7 @@
         <ul class="nav-items">
           <li><a href="index.html">Home</a></li>
           <span>|</span>
-          <li><a href="profile.html">My Profile</a></li>
+          <li><a href="profile.html">Profile</a></li>
           <span>|</span>
           <li><a href="">Portofolio</a></li>
         </ul>
@@ -69,12 +69,189 @@
             </g>
           </svg>
         </a>
+        <div id="nav-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+      <div id="mobile-nav">
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="">Portofolio</a></li>
+        </ul>
+      </div>
     </header>
 
     <!-- About Me Section -->
-    <section id="about-me"></section>
+    <section id="about-me">
+      <div class="container">
+        <div id="my-img">
+          <img src="assets/tzr-profile.JPG" alt="my image" />
+        </div>
+        <div id="about-container">
+          <h2>About Me</h2>
+          <p>
+            As a self-taught web developer, I have dedicated my time and energy
+            to learning everything I need to know about web development. And it
+            turns out that I fell in love with the frontend side of web
+            development. I have mastered the fundamental skills every frontend
+            developer needs to know, and those are none other than HTML, CSS,
+            and Javascript. I also have plenty of experience working with
+            ReactJS and NextJS.
+          </p>
+          <p>
+            I love solving problems and enjoy the challenge of finding solutions
+            to complex technical problems. I am comfortable working
+            independently as well as collaboratively in a team, and I am always
+            seeking new opportunities to improve my skills and stay up-to-date
+            with the latest trends and technologies in frontend development.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills"></section>
+    <section id="skills">
+      <div class="container">
+        <div id="coding-skills">
+          <h2>Coding Skills</h2>
+          <div class="slider-wrapper">
+            <div id="img-container">
+              <img
+                src="assets/html5-svgrepo-com.svg"
+                alt="html logo"
+                class="slider-item"
+              />
+              <img
+                src="assets/css3-svgrepo-com.svg"
+                alt="css logo"
+                class="slider-item"
+              />
+              <img
+                src="assets/javascript-svgrepo-com.svg"
+                alt="javascript logo"
+                class="slider-item"
+              />
+              <img
+                src="assets/reactjs-svgrepo-com.svg"
+                alt="reactjs logo"
+                class="slider-item"
+              />
+              <img
+                src="assets/nextjs-fill-svgrepo-com.svg"
+                alt="nextjs logo"
+                class="slider-item"
+              />
+            </div>
+            <span id="left-button">
+              <svg
+                width="32px"
+                height="32px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.1"
+                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                  fill="#dacddb"
+                />
+                <path
+                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                  stroke="#dacddb"
+                  stroke-width="2"
+                />
+                <path
+                  d="M13 9L10.2625 11.7375V11.7375C10.1175 11.8825 10.1175 12.1175 10.2625 12.2625V12.2625L13 15"
+                  stroke="#dacddb"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span id="right-button">
+              <svg
+                width="32px"
+                height="32px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.1"
+                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                  fill="#dacddb"
+                />
+                <path
+                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                  stroke="#dacddb"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11 15L13.7158 12.2842V12.2842C13.8728 12.1272 13.8728 11.8728 13.7158 11.7158V11.7158L11 9"
+                  stroke="#dacddb"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Nav Background Overlay -->
+    <div id="nav-overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div id="footer-links">
+          <div id="my-links">
+            <h2>Follow me on social media</h2>
+            <a href="https://www.instagram.com/tezarsurya">
+              <img
+                src="assets/instagram-svgrepo-com.svg"
+                width="24"
+                height="24"
+                alt="instagram icon"
+              />
+              <span>tezarsurya</span>
+            </a>
+            <a href="https://twitter.com/tzrsurya">
+              <img
+                src="assets/twitter-svgrepo-com.svg"
+                width="24"
+                height="24"
+                alt="twitter icon"
+              />
+              <span>tzrsurya</span>
+            </a>
+          </div>
+          <div id="revou-tribute">
+            <h2>Special thanks to:</h2>
+            <a href="https://revou.co/">
+              <img
+                src="assets/revou-logo.svg"
+                width="32"
+                height="32"
+                alt="revou logo"
+              />
+              <span>RevoU</span>
+            </a>
+            <p>for inspiring me to build this website.</p>
+          </div>
+        </div>
+        <span>Copyright &#169; 2023 Tezar Surya Fernanda</span>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>
