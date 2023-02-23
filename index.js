@@ -64,7 +64,7 @@ if (form) {
 }
 
 if (
-  path === "/tzr.dev" ||
+  path === "/tzr.dev/" ||
   path === "/tzr.dev/index.html" ||
   path === "/index.html"
 ) {
@@ -78,7 +78,7 @@ if (
 }
 
 if (
-  path === "/tzr.dev" ||
+  path === "/tzr.dev/" ||
   path === "/tzr.dev/index.html" ||
   path === "/index.html"
 ) {
