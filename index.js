@@ -5,6 +5,7 @@ const navBtn = document.getElementById("nav-button");
 const mobileNav = document.getElementById("mobile-nav");
 const bars = navBtn.children;
 const overlay = document.getElementById("nav-overlay");
+const path = window.location.pathname;
 
 let mobileNavShow = false;
 
@@ -62,7 +63,7 @@ if (form) {
   });
 }
 
-if (window.location.pathname === "/index.html") {
+if (path === "/" || path === "/index.html") {
   window.addEventListener("resize", (e) => {
     if (window.screen.width <= 640) {
       header.style.top = 0;
@@ -72,7 +73,7 @@ if (window.location.pathname === "/index.html") {
   });
 }
 
-if (window.location.pathname === "/index.html") {
+if (path === "/" || path === "/index.html") {
   window.addEventListener("scroll", (e) => {
     let scrollHeight = window.scrollY;
     if (window.screen.width < 640) {
