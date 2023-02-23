@@ -64,9 +64,10 @@ if (form) {
 }
 
 if (
-  path === "/tzr.dev/" ||
-  path === "/tzr.dev/index.html" ||
-  path === "/index.html"
+  path == "/tzr.dev/" ||
+  path == "/tzr.dev" ||
+  path == "/tzr.dev/index.html" ||
+  path == "/index.html"
 ) {
   window.addEventListener("resize", (e) => {
     if (window.screen.width <= 640) {
@@ -78,9 +79,10 @@ if (
 }
 
 if (
-  path === "/tzr.dev/" ||
-  path === "/tzr.dev/index.html" ||
-  path === "/index.html"
+  path == "/tzr.dev/" ||
+  path == "/tzr.dev" ||
+  path == "/tzr.dev/index.html" ||
+  path == "/index.html"
 ) {
   window.addEventListener("scroll", (e) => {
     let scrollHeight = window.scrollY;
@@ -95,6 +97,5 @@ if (
     if (scrollHeight > 160) {
       header.style.top = 0;
     }
-    console.log(window.location.pathname);
   });
 }
