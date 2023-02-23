@@ -63,7 +63,11 @@ if (form) {
   });
 }
 
-if (path === "/" || path === "/index.html") {
+if (
+  path === "/tzr.dev" ||
+  path === "/tzr.dev/index.html" ||
+  path === "/index.html"
+) {
   window.addEventListener("resize", (e) => {
     if (window.screen.width <= 640) {
       header.style.top = 0;
@@ -73,7 +77,11 @@ if (path === "/" || path === "/index.html") {
   });
 }
 
-if (path === "/" || path === "/index.html") {
+if (
+  path === "/tzr.dev" ||
+  path === "/tzr.dev/index.html" ||
+  path === "/index.html"
+) {
   window.addEventListener("scroll", (e) => {
     let scrollHeight = window.scrollY;
     if (window.screen.width < 640) {
